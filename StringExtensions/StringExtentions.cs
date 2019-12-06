@@ -37,14 +37,14 @@ namespace ExtensionMethods {
 
                 string parts = line[0];
                 line.RemoveAt(0);
-                line.Add(", ");
+                line.Add(",");
                 line.Add(parts);
                 parts = line[0];
                 while (articals.Contains(parts.ToLower()))
                 {
                    
                     line.RemoveAt(0);
-                    line.Add(" ");
+        
                     line.Add(parts);
                     parts = line[0];
                 }
