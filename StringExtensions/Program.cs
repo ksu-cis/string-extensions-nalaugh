@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Linq;
+using ExtensionMethods;
 namespace StringExtensions
 {
     class Program
@@ -9,9 +10,9 @@ namespace StringExtensions
         {
             List<string> writings = new List<string>()
             {
-                "Foo",
-                "Bar",
-                "A River Runs through It",
+                "foo",
+                "bar",
+                "a River Runs through It",
                 "The Five-Year Itch",
                 "The Bridges of Madison County",
                 "a quick brown fox jumps over the lazy dog",
@@ -25,9 +26,32 @@ namespace StringExtensions
             foreach(string s in writings)
             {
                 Console.WriteLine(s);
+                Console.WriteLine($"Word Count {s.WordsCount()}");
                 Console.WriteLine("---------------------------");
             }
-            
+            foreach(string s in writings)
+            {
+                Console.WriteLine(s.Capitalize());
+                Console.WriteLine("---------------------------");
+    
+
+            }
+            foreach (string s in writings)
+            {
+                s.Decapitalize();
+                
+                Console.WriteLine(s);
+                Console.WriteLine("---------------------------");
+             
+
+            }
+            string b = "The Way of Kings";
+         
+            Console.WriteLine(b.Titlize());
+            b = "The A bad name";
+            Console.WriteLine(b.Titlize());
+
+
         }
     }
 }
